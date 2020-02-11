@@ -22,11 +22,11 @@ ingress:
     email: ""
     enabled: false
     production: false
-#
+###
 # secretStorage: storage type
 # * local
 # * valut - for cloud eg. EKS, GKE etc.
-#
+###
 secretStorage: local
 storage:
   backup:
@@ -49,10 +49,18 @@ versionStream:
   ref: v1.0.343
   url: ""
 ###
-# webHook : engine for webhook and optionally supporting ChatOps
+# webHook: engine for webhook and optionally supporting ChatOps
 # * porw        - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
 # * lighthouse  - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
 #                 and for git surver other than gitub
 # * jenkins     - for static jenkins server
 ###
 webhook: prow
+###
+# repository: for artifact repositories
+# * nexus   - default
+# * bucketrepo
+# * none
+###
+repository: nexus
+
