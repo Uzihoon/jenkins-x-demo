@@ -3,7 +3,7 @@ cluster:
   environmentGitOwner: ""
   environmentGitPublic: false
   project: ""
-  provider: gke
+  provider: eks
   zone: ""
 gitops: true
 environments:
@@ -31,5 +31,5 @@ storage:
     url: ""
 versionStream:
   ref: "master"
-  url: https://github.com/jenkins-x/jenkins-x-versions.git
+  # url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

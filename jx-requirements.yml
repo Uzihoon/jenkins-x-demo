@@ -1,0 +1,58 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+cluster:
+  clusterName: terraform-eks-demo
+  devEnvApprovers:
+  - uzihoon
+  environmentGitOwner: uzihoon
+  gitKind: github
+  provider: eks
+  region: ap-northeast-2
+environments:
+- key: dev
+# - key: staging
+# - key: production
+kaniko: true
+ingress:
+  domain: ""
+  externalDNS: false
+  namespaceSubDomain: ""
+  tls:
+    email: ""
+    enabled: false
+    production: false
+#
+# secretStorage: storage type
+# * local
+# * valut - for cloud eg. EKS, GKE etc.
+#
+secretStorage: local
+storage:
+  backup:
+    enabled: false
+    url: ""
+  logs:
+    enabled: false
+    url: ""
+  reports:
+    enabled: false
+    url: ""
+  repository:
+    enabled: false
+    url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
+versionStream:
+  ref: v1.0.343
+  url: ""
+###
+# webHook : engine for webhook and optionally supporting ChatOps
+# * porw        - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
+# * lighthouse  - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
+#                 and for git surver other than gitub
+# * jenkins     - for static jenkins server
+###
+webhook: prow
