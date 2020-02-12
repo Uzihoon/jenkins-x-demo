@@ -50,7 +50,7 @@ versionStream:
   url: ""
 ###
 # webHook: engine for webhook and optionally supporting ChatOps
-# * porw        - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
+# * prow        - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
 # * lighthouse  - default for ChatOps and Serverless Jenkins X Pipelines with Tekton
 #                 and for git surver other than gitub
 # * jenkins     - for static jenkins server
@@ -63,4 +63,5 @@ webhook: prow
 # * none
 ###
 repository: nexus
+terraform: true
 
